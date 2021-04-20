@@ -21,11 +21,7 @@ server.use(express.json());
     ? [process.env.FE_URL_PROD]
     : [process.env.FE_URL_DEV] */
 
-const whiteList = [
-  "http://localhost:3000/",
-  process.env.FE_URL_PROD,
-  process.env.FE_URL_DEV,
-];
+const whiteList = [process.env.FE_URL_PROD, process.env.FE_URL_DEV];
 
 const corsOptions = {
   origin: function (origin, callback) {
