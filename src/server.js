@@ -21,20 +21,20 @@ server.use(express.json());
     ? [process.env.FE_URL_PROD]
     : [process.env.FE_URL_DEV] */
 
-const whiteList = [process.env.FE_URL_PROD, process.env.FE_URL_DEV];
+// const whiteList = [process.env.FE_URL_PROD, process.env.FE_URL_DEV];
 
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (whiteList.indexOf(origin) !== -1) {
-      // allowed
-      callback(null, true);
-    } else {
-      // Not allowed
-      callback(new Error("NOT ALLOWED - CORS ISSUES"));
-    }
-  },
-};
-server.use(cors(corsOptions)); // CROSS ORIGIN RESOURCE SHARING
+// const corsOptions = {
+//   origin: function (origin, callback) {
+//     if (whiteList.indexOf(origin) !== -1) {
+//       // allowed
+//       callback(null, true);
+//     } else {
+//       // Not allowed
+//       callback(new Error("NOT ALLOWED - CORS ISSUES"));
+//     }
+//   },
+// };
+// server.use(cors(corsOptions)); // CROSS ORIGIN RESOURCE SHARING
 
 //ROUTES
 
